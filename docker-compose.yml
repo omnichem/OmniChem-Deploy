@@ -4,6 +4,7 @@ services:
   db:
     image: postgres:14-alpine
     container_name: db-postgres-OmniChem
+    restart: always
     ports:
       - "5432:5432"
     volumes:
