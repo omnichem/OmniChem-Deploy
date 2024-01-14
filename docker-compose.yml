@@ -17,7 +17,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
   
   omnibot-app:
-    image: omnichem-tg-bot:v1.0.0
+    image: omnichem/omnichem-tg-bot:v1.0.1
     container_name: omnibot
     restart: always
 

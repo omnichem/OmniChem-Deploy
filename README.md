@@ -52,7 +52,7 @@
 2. Собрать образ:
    ```bash
    docker build -t omnichem/omnichem-tg-bot:v1.0.0 .
-где omnichem - имя профиля, omnichem-tg-bot - название образа, v1.0.0 - тег образа, . - пусть.
+   где omnichem - имя профиля, omnichem-tg-bot - название образа, v1.0.0 - тег образа, . - пусть.
 
 3. Пройти авторизацию на Docker Hub:
    ```bash
