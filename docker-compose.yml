@@ -15,6 +15,11 @@ services:
       POSTGRES_DB: ${DB_NAME}
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
+  
+  omnibot-app:
+    image: omnichem-tg-bot:v1.0.0
+    container_name: omnibot
+    restart: always
 
 volumes:
   postgres_data:

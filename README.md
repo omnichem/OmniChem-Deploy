@@ -46,4 +46,20 @@
 *Написать как пересобрать контейнер.*
 *Написать как удалить не нужные образы.*
 
+## Публикация образа в Docker Hub
+1. Создать Dockerfile в проекте
+
+2. Собрать образ:
+   ```bash
+   docker build -t omnichem/omnichem-tg-bot:v1.0.0 .
+где omnichem - имя профиля, omnichem-tg-bot - название образа, v1.0.0 - тег образа, . - пусть.
+
+3. Пройти авторизацию на Docker Hub:
+   ```bash
+   docker login
+
+4. Запушить образ на Docker Hub:
+   ```bash
+   docker push omnichem/omnichem-tg-bot:v1.0.0
+
    
