@@ -7,7 +7,7 @@ services:
     command: ./entrypoint.sh
     volumes:
       # - ./app:/home/app Это для локалки. Полезно для разработки
-      - ./products:/home/app/
+      - ./products:/home/app/products
     ports:
       - "8000:8000"
     depends_on:
