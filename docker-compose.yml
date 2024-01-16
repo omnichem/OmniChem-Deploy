@@ -3,11 +3,11 @@ version: "3.9"
 services:
   web-app:
     image: omnichem/omnichem_backend-app:1.0.0
-    container_name: web-app-OmniChem
+    container_name: backend-app-OmniChem
     command: ./entrypoint.sh
     volumes:
       # - ./app:/home/app Это для локалки. Полезно для разработки
-      - ./products:/home/app/products
+      - ./products:/home/app/
     ports:
       - "8000:8000"
     depends_on:
