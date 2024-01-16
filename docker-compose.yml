@@ -1,6 +1,20 @@
 version: "3.9"
 
 services:
+  web-app:
+    image: omnichem/omnichem_web-app:1.0.0
+    container_name: web-app-OmniChem
+    command: ./entrypoint.sh
+    volumes:
+      # - ./app:/home/app Это для локалки. Полезно для разработки
+      - ./products:/home/app/products
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    env_file:
+      - .env
+
   db:
     image: postgres:14-alpine
     container_name: db-postgres-OmniChem
