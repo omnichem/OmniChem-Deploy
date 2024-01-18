@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   web-app:
-    image: omnichem/omnichem_backend-app:1.0.0
+    image: omnichem/omnichem_backend-app:1.0.1
     container_name: backend-app-OmniChem
     command: ./entrypoint.sh
     volumes:
