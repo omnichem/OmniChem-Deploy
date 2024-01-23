@@ -44,8 +44,8 @@ services:
 #    entrypoint: /bin/sh
     ports:
       - "6688:6688"
-    working_dir: /srv/app
-    tty: true
+#    working_dir: /srv/app
+#    tty: true
     
 volumes:
   postgres_data:
