@@ -45,10 +45,6 @@ services:
     ports:
       - "6688:6688"
     working_dir: /srv/app
-    volumes:
-      - type: bind
-        source: ./
-        target: /srv/app
     tty: true
     
 volumes:
