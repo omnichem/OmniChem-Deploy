@@ -41,7 +41,7 @@ services:
   vite_docker:
     image: omnichem/omnichem-frontend-app:latest
     container_name: omnichem-frontend
-    entrypoint: /bin/sh
+#    entrypoint: /bin/sh
     ports:
       - "6688:6688"
     working_dir: /srv/app
