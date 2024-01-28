@@ -32,11 +32,13 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
   
   omnibot-app:
-    image: omnichem/omnichem-tg-bot:v1.0.2
+    image: omnichem/omnichem-tg-bot:v1.0.3
     container_name: omnibot
     restart: always
     env_file:
       - .env
+    volumes:
+      - ./omnibot_db:/app_tg_bot/omnibot_db
 
   vite_docker:
     image: omnichem/omnichem-frontend-app:latest
