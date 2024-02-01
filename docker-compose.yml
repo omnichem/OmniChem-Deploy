@@ -51,3 +51,13 @@ services:
     
 volumes:
   postgres_data:
+
+
+version: "3.9"
+services:
+    omnichemLand:
+    image: omnichemLanding
+    container_name: omnichemLand
+    ports:
+      - 4200:4200
+    restart: unless-stopped
