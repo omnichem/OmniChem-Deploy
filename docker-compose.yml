@@ -37,14 +37,11 @@ services:
     volumes:
       - ./omnibot_db:/app_tg_bot/omnibot_db
 
-  vite_docker:
-    image: omnichem/omnichem-frontend-app:latest
-    container_name: omnichem-frontend
-#    entrypoint: /bin/sh
+  frontend-app:
+    image: omnichem/omnichem-frontend-app:v1.0.6
+    container_name: omnichem-frontend-app
     ports:
       - "6688:6688"
-#    working_dir: /srv/app
-#    tty: true
 
   omnichemLand:
     image: omnichem/omnichem-landing:latest
