@@ -5,9 +5,6 @@ services:
     image: omnichem/omnichem_backend-app:latest
     container_name: backend-app-OmniChem
     command: ./entrypoint.sh
-    volumes:
-      # - ./app:/home/app Это для локалки. Полезно для разработки
-      - ./products:/home/app/products
     ports:
       - "8000:8000"
     depends_on:
