@@ -154,3 +154,4 @@ cython_debug/
 
 # PyCharm
 /.idea/
+/omnibot_db/OmniBot_db.db

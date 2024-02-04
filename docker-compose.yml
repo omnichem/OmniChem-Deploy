@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   web-app:
-    image: omnichem/omnichem_backend-app:1.0.7
+    image: omnichem/omnichem_backend-app:latest
     container_name: backend-app-OmniChem
     command: ./entrypoint.sh
     volumes:
@@ -48,16 +48,13 @@ services:
       - "6688:6688"
 #    working_dir: /srv/app
 #    tty: true
+
+  omnichemLand:
+    image: omnichem/omnichem-landing:latest
+    container_name: omnichemLand
+    ports:
+      - "4200:4200"
+    restart: unless-stopped
     
 volumes:
   postgres_data:
-
-
-version: "3.9"
-services:
-    omnichemLand:
-    image: omnichemLanding
-    container_name: omnichemLand
-    ports:
-      - 4200:4200
-    restart: unless-stopped
