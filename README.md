@@ -62,4 +62,28 @@
    ```bash
    docker push omnichem/omnichem-tg-bot:v1.0.0
 
+## Создание дампа БД
+1. Подключится к контенеру:
+   ```bash
+       docker exec -it <имя контейнера> sh
+
+2. Перейти в папку `dumps`:
+   ```bash
+       cd dumps
+
+3. Создать дамп БД в файл `dump_file.dump`:
+   ```bash
+       pg_dump -Fc -U <имя пользователя> -f dump_file.dump <имя базы данных>
+
+4. Копирование дампа на локальную машину:
+   ```bash
+       scp -r ubuntu@<IP сервера>:~/OmniChem-Deploy/dumps/dump_file.dump .  
+
+5. Копирование файла на сервер:
+   ```bash
+       scp ./dump_file.dump ubuntu@<IP сервера>:~/OmniChem-Deploy/dumps
+
+6. Востановление дампа:
+   ```bash
+       pg_restore -Fc -d <имя базы данных> -U <имя пользователя> -W -c dump_file.dump
    
