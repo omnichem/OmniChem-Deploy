@@ -49,7 +49,7 @@ services:
     tty: true
 
   omnichemLand:
-    image: omnichem/omnichem-landing:v1.1.0
+    image: omnichem/omnichem-landing:latest
     container_name: omnichemLand
     ports:
       - "4200:4200"
