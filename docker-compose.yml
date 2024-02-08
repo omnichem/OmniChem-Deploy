@@ -39,7 +39,7 @@ services:
 
   omnichem-frontend-app:
     build: .
-    image: omnichem/omnichem-frontend-app:v1.0.9
+    image: omnichem/omnichem-frontend-app:v1.0.10
     container_name: omnichem-frontend-app
     env_file:
       - .env
