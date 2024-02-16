@@ -32,7 +32,7 @@ services:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
   
   omnibot-app:
-    image: omnichem/omnichem-tg-bot:v1.0.3
+    image: omnichem/omnichem-tg-bot:v1.0.4
     container_name: omnibot
     restart: always
     env_file:
@@ -51,10 +51,10 @@ services:
     tty: true
 
   omnichemLand:
-    image: omnichem/omnichem-landing:latest
-    container_name: omnichemLand
+    image: omnichem/omnichem_landing:env
+    container_name: omnichemLand_landing
     ports:
-      - "4200:4200"
+      - "3000:3000"
     restart: unless-stopped
 
   nginx:
