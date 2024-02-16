@@ -49,18 +49,11 @@ services:
     tty: true
 
   omnichemLand:
-    image: omnichem/omnichem-landing:latest
-    container_name: omnichemLand
-    ports:
-      - "4200:4200"
-    restart: unless-stopped
-    
-volumes:
-  postgres_data:
-
-  omnichemLand:
     image: omnichem/omnichem_landing:env
     container_name: omnichemLand_landing
     ports:
       - "3000:3000"
     restart: unless-stopped
+    
+volumes:
+  postgres_data:
