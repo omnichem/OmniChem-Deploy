@@ -4,7 +4,7 @@ services:
   omnichem-backend-app:
     image: omnichem/omnichem_backend-app:latest
     container_name: backend-app-OmniChem
-    command: ./entrypoint.sh
+    command: ./entrypoint-deploy.sh
     volumes:
       - ./staticfiles:/home/staticfiles
       - ./mediafiles:/home/mediafiles
