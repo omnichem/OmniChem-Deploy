@@ -8,8 +8,8 @@ services:
     volumes:
       - ./staticfiles:/home/staticfiles
       - ./mediafiles:/home/mediafiles
-    ports:
-      - "8000:8000"
+#    ports:
+#      - "8000:8000"
     depends_on:
       - db
     env_file:
@@ -45,16 +45,16 @@ services:
     container_name: omnichem-frontend-app
     env_file:
       - .env
-    ports:
-      - "6688:6688"
+#    ports:
+#      - "6688:6688"
     working_dir: /app
     tty: true
 
   omnichemLand:
     image: omnichem/omnichem_landing:env
     container_name: omnichemLand_landing
-    ports:
-      - "3000:3000"
+#    ports:
+#      - "3000:3000"
     restart: unless-stopped
 
   nginx:
@@ -63,6 +63,7 @@ services:
     restart: always
     ports:
       - "80:80"
+      - "8000:8000"
     volumes:
       - ./staticfiles:/home/app/web/staticfiles
       - ./mediafiles:/home/app/web/mediafiles
