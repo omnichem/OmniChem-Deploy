@@ -51,7 +51,7 @@ services:
     tty: true
 
   omnichemLand:
-    image: omnichem/landing_omnichem:v1.0.1
+    image: omnichem/landing_omnichem:v1.0.2
     container_name: landing_omnichem_app
 #    ports:
 #      - "3000:3000"
