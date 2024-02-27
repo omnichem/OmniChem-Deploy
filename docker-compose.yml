@@ -50,7 +50,7 @@ services:
     working_dir: /app
     tty: true
 
-  landing_omnichem-app:
+  omnichemLand:
     image: omnichem/landing_omnichem:v1.0.1
     container_name: landing_omnichem_app
 #    ports:
