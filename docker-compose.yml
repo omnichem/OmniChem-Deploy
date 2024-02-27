@@ -50,12 +50,12 @@ services:
     working_dir: /app
     tty: true
 
-  omnichemLand:
-    image: omnichem/omnichem_landing:env
-    container_name: omnichemLand_landing
+  landing_omnichem-app:
+    image: omnichem/landing_omnichem:v1.0.0
+    container_name: landing_omnichem_app
 #    ports:
-#      - "3000:3000"
-    restart: unless-stopped
+#      - "5173:5173"
+    tty: true
 
   nginx:
     image: nginx:latest
