@@ -53,8 +53,8 @@ services:
   landing_omnichem-app:
     image: omnichem/landing_omnichem:v1.0.0
     container_name: landing_omnichem_app
-#    ports:
-#      - "5173:5173"
+     ports:
+       - "5173:5173"
     tty: true
 
   nginx:
