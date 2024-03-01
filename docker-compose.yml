@@ -55,7 +55,7 @@ services:
     container_name: landing_omnichem_app
 #    ports:
 #      - "3000:3000"
-     tty: true
+    tty: true
 
   nginx:
     image: nginx:latest
