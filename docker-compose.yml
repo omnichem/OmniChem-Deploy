@@ -50,9 +50,9 @@ services:
     working_dir: /app
     tty: true
 
-  omnichemLand:
+  omnichemLanding:
     image: omnichem/omnichem-landing:v1.0.7
-    container_name: omnichemLand
+    container_name: omnichemLanding
 #    ports:
 #      - "3000:3000"
     tty: true
