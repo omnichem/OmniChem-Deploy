@@ -37,6 +37,10 @@
 5. Запустите приложение с использованием Docker Compose:
    ```bash
    docker compose -f docker-compose-test.yml up -d
+
+6. Остановить контейнеры:
+   ```bash
+   docker compose -f docker-compose-test.yml down
    
 ## Развертывание новой версии
 1. Подтянуть изменения с [GitHab](https://github.com/omnichem/OmniChem-Deploy) используя:
