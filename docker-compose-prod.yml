@@ -45,8 +45,8 @@ services:
     container_name: omnichem-frontend-app
     env_file:
       - .env
-#    ports:
-#      - "6688:6688"
+    ports:
+      - "6688:6688"
     working_dir: /app
     tty: true
 
