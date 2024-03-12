@@ -41,12 +41,12 @@ services:
       - ./omnibot_db:/app_tg_bot/omnibot_db
 
   omnichem-frontend-app:
-    image: omnichem/omnichem-frontend-app:v1.1.7
+    image: omnichem/omnichem-frontend-app:v1.1.6
     container_name: omnichem-frontend-app
     env_file:
       - .env
-    ports:
-      - "6688:6688"
+    #ports:
+    #  - "6688:6688"
     working_dir: /app
     tty: true
 
