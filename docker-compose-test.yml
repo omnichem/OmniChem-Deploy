@@ -41,7 +41,7 @@ services:
       - ./omnibot_db:/app_tg_bot/omnibot_db
 
   omnichem-frontend-app:
-    image: omnichem/omnichem-frontend-app:v1.2.0
+    image: omnichem/omnichem-frontend-app:v1.2.1
     container_name: omnichem-frontend-app
     env_file:
       - .env
